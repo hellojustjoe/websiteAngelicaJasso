@@ -1,0 +1,170 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Playfair+Display:wght@700&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #E0E0E0;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #FFFFFF;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.language-switcher {
+    text-align: right;
+    padding: 10px;
+    background-color: #1E1E1E;
+}
+
+.language-switcher button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    background-color: #2E2E2E;
+    color: #E0E0E0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.language-switcher button:hover {
+    background-color: #3E3E3E;
+}
+
+/* Banner Styles */
+.banner {
+    position: relative;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.banner-background {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+.teacher-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    margin-right: 20px;
+}
+
+.teacher-name {
+    font-size: 2em;
+}
+
+/* Section Styles */
+section {
+    padding: 40px 20px;
+}
+
+.about-me, .reviews, .contact {
+    background-color: #1E1E1E;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.about-me h2, .reviews h2, .contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    line-height: 1.6;
+    font-size: 1em;
+}
+
+/* Carousel Styles */
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  padding: 20px 0;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 80%;
+  max-width: 300px;
+  margin: 0 10px;
+  scroll-snap-align: center;
+  padding: 20px;
+  background-color: #2E2E2E;
+  border-radius: 10px;
+  color: #E0E0E0;
+  box-sizing: border-box;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+
+.carousel::before,
+.carousel::after {
+    content: "";
+    flex: 0 0 10px;
+}
+
+@media (min-width: 768px) {
+  .carousel-item {
+      width: 250px;
+  }
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.social-links a {
+  font-size: 2.5em;
+  color: #E0E0E0;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #FFFFFF;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .banner-content {
+        width: 70%;
+    }
+
+    .teacher-name {
+        font-size: 3em;
+    }
+
+    .carousel-item {
+        min-width: 60%;
+    }
+}
